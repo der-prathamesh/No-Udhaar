@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_below="@+id/imageView3"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="-91dp"
+        android:autofillHints="Username"
+        android:drawableEnd="@drawable/ic_baseline_account_circle_24"
+        android:hint="@string/username"
+        android:inputType="text"
+        android:textColorHint="#1A237E" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_alignBottom="@+id/username"
+        android:layout_marginBottom="-62dp"
+        android:autofillHints="Password"
+        android:drawableEnd="@drawable/ic_baseline_lock_24"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textColorHint="#1A237E" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="369dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@string/todo"
+        app:srcCompat="@drawable/no_udhaar" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="133dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-65dp"
+        android:background="#1D257A"
+        android:text="Log In"
+        android:textColor="@color/background" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="229dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="New User? Register now"
+        android:textSize="20dp" />
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1038553456342",
+    "project_id": "no-udhaar",
+    "storage_bucket": "no-udhaar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1038553456342:android:64dc6a1dafe297dba03377",
+        "android_client_info": {
+          "package_name": "com.example.noudhar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1038553456342-lo6mvfe27fq40c904iuqll7cqgjumsuk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGSNyjfJE3LtSW2HzGXNj-PGHh9VZ2L1Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1038553456342-lo6mvfe27fq40c904iuqll7cqgjumsuk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
