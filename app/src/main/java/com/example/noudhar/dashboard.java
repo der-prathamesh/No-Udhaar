@@ -8,7 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class dashboard extends AppCompatActivity implements View.OnClickListener{
+import java.net.Inet4Address;
+
+public class dashboard extends AppCompatActivity{
 Button createnew;
 Button seeall;
     @Override
@@ -18,20 +20,25 @@ Button seeall;
 
         createnew = findViewById(R.id.createnew);
         seeall = findViewById(R.id.seeall);
-    }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.createnew:
-                Intent intent = new Intent(this, Creategroup.class);
+
+        createnew.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(dashboard.this,Creategroup.class);
                 startActivity(intent);
-                break;
+            }
+        });
 
-            case  R.id.seeall:
-                Intent intent1=new Intent(this,Signup.class);
+        seeall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1=new Intent(dashboard.this,Viewall.class);
                 startActivity(intent1);
-                break;
-        }
+            }
+        });
+
     }
+
+
 }
