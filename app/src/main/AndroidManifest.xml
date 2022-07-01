@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NoUdhar">
         <activity
+            android:name=".actionsonthegroup"
+            android:exported="false" />
+        <activity
             android:name=".Viewall"
             android:exported="false" />
         <activity

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".actionsonthegroup"
+    android:background="#6B38A6">
+
+
+
+    <TextView
+        android:id="@+id/actionsonthegrouptop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="NO UDHAAR"
+        android:textAlignment="center"
+        android:textColor="#0BBF19"
+        android:textSize="55dp" />
+
+
+    <TextView
+    android:id="@+id/actionsongroupheading2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/actionsonthegrouptop"
+    android:fontFamily="@font/poppins_bold"
+    android:text="Rakho Udhaar Likh kar"
+    android:textAlignment="center"
+    android:textColor="#10024E"
+    android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/addamember"
+        android:layout_width="197dp"
+        android:layout_height="67dp"
+        android:layout_below="@id/actionsongroupheading2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="115dp"
+        android:background="#0DBA1A"
+        android:fontFamily="@font/poppins_medium"
+        android:text="ADD A NEW MEMBER"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/addexpense"
+        android:layout_width="197dp"
+        android:layout_height="67dp"
+        android:layout_below="@id/addamember"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp"
+        android:background="#0DBA1A"
+        android:fontFamily="@font/poppins_medium"
+        android:text="ADD A EXPENSE"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/balances"
+        android:layout_width="197dp"
+        android:layout_height="67dp"
+        android:layout_below="@id/addexpense"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:background="#0DBA1A"
+        android:fontFamily="@font/poppins_medium"
+        android:text="SEE ALL THE BALANCES"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25dp" />
+</RelativeLayout>
