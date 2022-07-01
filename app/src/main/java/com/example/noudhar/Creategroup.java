@@ -1,32 +1,23 @@
 package com.example.noudhar;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
-import android.nfc.Tag;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.lang.ref.Reference;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Creategroup extends AppCompatActivity implements View.OnClickListener {
+public class Creategroup extends AppCompatActivity  {
     EditText createagroup;
     Button buttongroup;
     DatabaseReference mdatabase;
@@ -42,15 +33,16 @@ public class Creategroup extends AppCompatActivity implements View.OnClickListen
         mdatabase = FirebaseDatabase.getInstance().getReference().child("Groups");
         Groups=new ArrayList<>();
 
+        buttongroup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                createnewgroup();
+
+            }
+        });
     }
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.buttongroup:
-                createnewgroup();
-        }
-    }
+
 
     private void createnewgroup() {
         String name = createagroup.getText().toString().trim();

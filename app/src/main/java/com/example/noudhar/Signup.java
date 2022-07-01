@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -105,6 +106,11 @@ public class Signup extends AppCompatActivity implements View.OnClickListener {
         mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
+                if (!task.isSuccessful()){
+                    if (task.getException() instanceof FirebaseAuthUserCollisionException){
+                        Toast.makeText(Signup.this,"User already exists please use login page to log in",Toast.LENGTH_LONG);
+                    }
+                }
                 if (task.isSuccessful()){
                     User user=new User(name,number,email);
                     FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
@@ -120,9 +126,8 @@ public class Signup extends AppCompatActivity implements View.OnClickListener {
                         }
                     });
 
-                }else {
-                    Toast.makeText(Signup.this,"Unable to Register User Please try again later",Toast.LENGTH_LONG).show();
                 }
+
             }
         });
         }
