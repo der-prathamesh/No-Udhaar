@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     tools:context=".Viewall"
-    android:background="#6B38A6">
+    android:background="#086B38A6">
 
 
     <TextView

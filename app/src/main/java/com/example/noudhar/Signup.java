@@ -115,28 +115,19 @@ public class Signup extends AppCompatActivity implements View.OnClickListener {
                             .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
-                                    if (!task.isSuccessful()) {
-                                        if (task.getException() instanceof FirebaseAuthUserCollisionException) {
-                                            Toast.makeText(Signup.this, "User already exists please use login page to log in", Toast.LENGTH_LONG);
-                                        }
 
                                     if (task.isSuccessful()) {
-                                        FirebaseUser user1 = FirebaseAuth.getInstance().getCurrentUser();
-                                        if (user1.isEmailVerified()) {
-                                            Toast.makeText(Signup.this, "User Registered Successfully", Toast.LENGTH_LONG).show();
-                                            startActivity(new Intent(Signup.this, MainActivity.class));
-                                        }
-                                        else if (!user1.isEmailVerified()){
-                                            user1.sendEmailVerification();
-                                            Toast.makeText(Signup.this, "Check your email for verification link", Toast.LENGTH_SHORT).show();
-                                        }
+                                        Toast.makeText(Signup.this,"User Registered Successfully",Toast.LENGTH_LONG).show();
+                                        Intent intent1=new Intent(Signup.this, dashboard.class);
+                                        startActivity(intent1);
+
                                     } else {
                                         Toast.makeText(Signup.this, "Unable to Register User Please try again later", Toast.LENGTH_LONG).show();
                                     }
 
                                 }
 
-                            }
+
                 });
             }
         }

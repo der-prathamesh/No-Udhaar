@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".dashboard"
-    android:background="#6B38A6">
+    android:background="#086B38A6">
 
     <TextView
         android:id="@+id/heading"
