@@ -134,9 +134,10 @@ public class Signup extends AppCompatActivity implements View.OnClickListener {
 
                                 }
 
-                            });
-                }
+                            }
+                });
             }
-        });
-    }
+        }
+    });
+}
 }
