@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".actionsonthegroup"
+    tools:context=".actionongroup"
     android:background="#6B38A6">
 
 
@@ -21,15 +21,15 @@
 
 
     <TextView
-    android:id="@+id/actionsongroupheading2"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/actionsonthegrouptop"
-    android:fontFamily="@font/poppins_bold"
-    android:text="Rakho Udhaar Likh kar"
-    android:textAlignment="center"
-    android:textColor="#10024E"
-    android:textSize="20dp" />
+        android:id="@+id/actionsongroupheading2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actionsonthegrouptop"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Rakho Udhaar Likh kar"
+        android:textAlignment="center"
+        android:textColor="#10024E"
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/addamember"
