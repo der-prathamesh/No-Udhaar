@@ -107,24 +107,25 @@ public class Signup extends AppCompatActivity implements View.OnClickListener {
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                if (!task.isSuccessful()) {
-                    if (task.getException() instanceof FirebaseAuthUserCollisionException) {
-                        Toast.makeText(Signup.this, "User already exists please use login page to log in", Toast.LENGTH_LONG);
-                    }
-                }
+
                 if (task.isSuccessful()) {
                     User user = new User(name, number, email);
                     FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                             .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
+                                    if (!task.isSuccessful()) {
+                                        if (task.getException() instanceof FirebaseAuthUserCollisionException) {
+                                            Toast.makeText(Signup.this, "User already exists please use login page to log in", Toast.LENGTH_LONG);
+                                        }
+
                                     if (task.isSuccessful()) {
-                                        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                                        if (user.isEmailVerified()) {
+                                        FirebaseUser user1 = FirebaseAuth.getInstance().getCurrentUser();
+                                        if (user1.isEmailVerified()) {
                                             Toast.makeText(Signup.this, "User Registered Successfully", Toast.LENGTH_LONG).show();
                                             startActivity(new Intent(Signup.this, MainActivity.class));
                                         } else {
-                                            user.sendEmailVerification();
+                                            user1.sendEmailVerification();
                                             Toast.makeText(Signup.this, "Check your email for verification link", Toast.LENGTH_SHORT).show();
                                         }
                                     } else {
