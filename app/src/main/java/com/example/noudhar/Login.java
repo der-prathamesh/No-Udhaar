@@ -47,6 +47,7 @@ private FirebaseAuth mAuth;
         switch (view.getId()){
             case R.id.textView2:
                 startActivity(new Intent(this,Signup.class));
+                finish();
                 break;
             case R.id.button2:
                 button2();

@@ -58,6 +58,7 @@ public class Signup extends AppCompatActivity implements View.OnClickListener {
         switch (view.getId()){
             case R.id.textview3:
                 startActivity(new Intent(this,Login.class));
+                finish();
                 break;
             case R.id.button3:
                 button3();
@@ -124,7 +125,8 @@ public class Signup extends AppCompatActivity implements View.OnClickListener {
                                         if (user1.isEmailVerified()) {
                                             Toast.makeText(Signup.this, "User Registered Successfully", Toast.LENGTH_LONG).show();
                                             startActivity(new Intent(Signup.this, MainActivity.class));
-                                        } else {
+                                        }
+                                        else if (!user1.isEmailVerified()){
                                             user1.sendEmailVerification();
                                             Toast.makeText(Signup.this, "Check your email for verification link", Toast.LENGTH_SHORT).show();
                                         }
@@ -134,9 +136,10 @@ public class Signup extends AppCompatActivity implements View.OnClickListener {
 
                                 }
 
-                            });
-                }
+                            }
+                });
             }
-        });
-    }
+        }
+    });
+}
 }
