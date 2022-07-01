@@ -82,4 +82,20 @@
         android:text="View all your Udhaars and Kharchas"
         android:textColor="@color/black"
         android:textSize="19dp" />
+
+    <Button
+        android:id="@+id/signout"
+        android:layout_width="131dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subheading2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="92dp"
+        android:background="#AA1414"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/poppins_medium"
+        android:text="SIGNOUT"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25dp" />
 </RelativeLayout>

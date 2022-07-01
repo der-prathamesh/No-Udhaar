@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -64,71 +65,77 @@ public class Signup extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void button3() {
-        String email=editTextemail.getText().toString().trim();
-        String number=editTextnumber.getText().toString().trim();
-        String name=editTextname.getText().toString().trim();
-        String password=editTextpassword.getText().toString().trim();
-        if (number.isEmpty()){
+        String email = editTextemail.getText().toString().trim();
+        String number = editTextnumber.getText().toString().trim();
+        String name = editTextname.getText().toString().trim();
+        String password = editTextpassword.getText().toString().trim();
+        if (number.isEmpty()) {
             editTextnumber.setError("Please Enter Phone Number");
             editTextnumber.requestFocus();
             return;
         }
-        if(number.length()<10){
+        if (number.length() < 10) {
             editTextnumber.setError("Please enter a valid Phone number");
             editTextnumber.requestFocus();
             return;
         }
-        if (password.isEmpty()){
+        if (password.isEmpty()) {
             editTextpassword.setError("Please Enter Password");
             editTextpassword.requestFocus();
             return;
         }
-        if(password.length()<6){
+        if (password.length() < 6) {
             editTextpassword.setError("Password Should be more than 6 characters");
             editTextpassword.requestFocus();
             return;
         }
-        if (email.isEmpty()){
+        if (email.isEmpty()) {
             editTextemail.setError("Please Enter Email");
             editTextemail.requestFocus();
             return;
         }
-        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             editTextemail.setError("Please Enter a valid Email Address");
             editTextemail.requestFocus();
             return;
         }
-        if (name.isEmpty()){
+        if (name.isEmpty()) {
             editTextname.setError("Please Enter Your Name");
             editTextname.requestFocus();
             return;
         }
-        mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                if (!task.isSuccessful()){
-                    if (task.getException() instanceof FirebaseAuthUserCollisionException){
-                        Toast.makeText(Signup.this,"User already exists please use login page to log in",Toast.LENGTH_LONG);
+                if (!task.isSuccessful()) {
+                    if (task.getException() instanceof FirebaseAuthUserCollisionException) {
+                        Toast.makeText(Signup.this, "User already exists please use login page to log in", Toast.LENGTH_LONG);
                     }
                 }
-                if (task.isSuccessful()){
-                    User user=new User(name,number,email);
+                if (task.isSuccessful()) {
+                    User user = new User(name, number, email);
                     FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                             .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            if (task.isSuccessful()){
-                                Toast.makeText(Signup.this,"User Registered Successfully",Toast.LENGTH_LONG).show();
-                                startActivity(new Intent(Signup.this,MainActivity.class));}
-                             else {
-                                Toast.makeText(Signup.this, "Unable to Register User Please try again later", Toast.LENGTH_LONG).show();
-                            }
-                        }
-                    });
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if (task.isSuccessful()) {
+                                        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                                        if (user.isEmailVerified()) {
+                                            Toast.makeText(Signup.this, "User Registered Successfully", Toast.LENGTH_LONG).show();
+                                            startActivity(new Intent(Signup.this, MainActivity.class));
+                                        } else {
+                                            user.sendEmailVerification();
+                                            Toast.makeText(Signup.this, "Check your email for verification link", Toast.LENGTH_SHORT).show();
+                                        }
+                                    } else {
+                                        Toast.makeText(Signup.this, "Unable to Register User Please try again later", Toast.LENGTH_LONG).show();
+                                    }
 
+                                }
+
+                            });
                 }
-
             }
         });
-        }
     }
+}
