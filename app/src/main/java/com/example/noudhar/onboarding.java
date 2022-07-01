@@ -21,8 +21,6 @@ public class onboarding extends AppCompatActivity {
     Button buttonback, buttonnext, skipbutton;
 
     TextView[] dots;
-    onboardingadapter onboardingadapter;
-
     @RequiresApi(api = Build.VERSION_CODES.M)
     @SuppressLint("WrongViewCast")
     @Override
@@ -76,14 +74,7 @@ public class onboarding extends AppCompatActivity {
             }
         });
 
-        mSLideViewPager = (ViewPager) findViewById(R.id.slideviewpager);
 
-        onboardingadapter = new onboardingadapter(this);
-
-        mSLideViewPager.setAdapter(onboardingadapter);
-
-        setUpindicator(0);
-        mSLideViewPager.addOnPageChangeListener(viewListener);
 
     }
 

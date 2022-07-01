@@ -26,8 +26,6 @@ private FirebaseAuth mAuth;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        getSupportActionBar().hide();
-    getSupportActionBar().hide();
     editTextusername= findViewById(R.id.username);
     editTextpassword= findViewById(R.id.password);
     button2=findViewById(R.id.button2);
