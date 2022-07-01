@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".Viewall"
+    android:background="#6B38A6">
+
+
+    <TextView
+        android:id="@+id/viewalltop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/sonsie_one"
+        android:text="No Udhaar"
+        android:textAlignment="center"
+        android:textColor="#0BBF19"
+        android:textSize="50dp" />
+
+    <TextView
+        android:id="@+id/viewalltop2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewalltop"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Here are all your groups"
+        android:textColor="#10024E"
+        android:textSize="25dp"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/group_list_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/viewalltop2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="25dp"
+        android:background="#6B38A6"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:scrollbars="vertical" />
+
+    <TextView
+        android:id="@+id/noGroupsMsg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="" />
+
+</RelativeLayout>

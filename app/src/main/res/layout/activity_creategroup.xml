@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Creategroup"
+    android:background="#6B38A6">
+
+    <TextView
+        android:id="@+id/creategrouptop"
+        android:layout_width="322dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/sonsie_one"
+        android:text="No Udhaar"
+        android:textAlignment="center"
+        android:textColor="#0BBF19"
+        android:textSize="45dp" />
+
+    <TextView
+        android:id="@+id/createagrouptop2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/creategrouptop"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Start your journey today with No Udhaar"
+        android:textColor="#10024E"
+        android:textSize="20dp"
+        />
+
+    <EditText
+        android:id="@+id/createagroup"
+        android:layout_width="371dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/creategrouptop"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="220dp"
+        android:hint="Enter Group Name"
+        android:textColorHint="#030947" />
+
+    <Button
+        android:id="@+id/buttongroup"
+        android:layout_width="132dp"
+        android:layout_height="62dp"
+        android:layout_below="@id/createagroup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="#4AD813"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Create group"
+        android:textColor="#1A237E" />
+</RelativeLayout>

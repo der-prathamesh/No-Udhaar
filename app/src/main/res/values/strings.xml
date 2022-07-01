@@ -19,5 +19,11 @@
     <string name="desc_three">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
     <string name="desc_fourth">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
     <string name="keep_track_of_payments">Keep track of payments</string>
+    <string name="no_udhaar">NO UDHAAR</string>
+    <string name="list_all_groups">List All groups</string>
+    <string name="groups">GROUPS</string>
+    <string name="see_all_the_groups_you_are_a_part_of">See all the groups you are a part of</string>
+    <string name="create_new_group">Create new group</string>
+    <string name="start_accounting_now_with_no_udhaar">Start Accounting Now with No Udhaar</string>
 
 </resources>

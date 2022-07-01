@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NoUdhar">
         <activity
+            android:name=".Viewall"
+            android:exported="false" />
+        <activity
+            android:name=".Creategroup"
+            android:exported="false" />
+        <activity
+            android:name=".addnewmember"
+            android:exported="false" />
+        <activity
+            android:name=".dashboard"
+            android:exported="false" />
+        <activity
             android:name=".onboarding"
             android:exported="false" />
         <activity

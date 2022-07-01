@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "1038553456342",
+    "firebase_url": "https://no-udhaar-default-rtdb.firebaseio.com",
     "project_id": "no-udhaar",
     "storage_bucket": "no-udhaar.appspot.com"
   },
