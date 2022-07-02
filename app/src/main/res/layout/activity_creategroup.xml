@@ -7,29 +7,6 @@
     tools:context=".Creategroup"
     android:background="#086B38A6">
 
-    <TextView
-        android:id="@+id/creategrouptop"
-        android:layout_width="322dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="@font/sonsie_one"
-        android:text="No Udhaar"
-        android:textAlignment="center"
-        android:textColor="#0BBF19"
-        android:textSize="45dp" />
-
-    <TextView
-        android:id="@+id/createagrouptop2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/creategrouptop"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="@font/poppins_medium"
-        android:text="Start your journey today with No Udhaar"
-        android:textColor="#10024E"
-        android:textSize="20dp"
-        />
-
     <EditText
         android:id="@+id/createagroup"
         android:layout_width="371dp"

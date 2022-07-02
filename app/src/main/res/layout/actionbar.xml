@@ -3,11 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#6B38A6"
+    android:background="#24B33B"
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="UnusedAttribute"
     android:elevation="4dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-    popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+    popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
 </androidx.appcompat.widget.Toolbar>

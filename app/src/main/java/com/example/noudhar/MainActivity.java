@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         FirebaseUser mFirebaseUser= mfirebaseAuth.getCurrentUser();
         if(mFirebaseUser!=null){
             //User is already logged in
-            startActivity(new Intent(this,dashboard.class));
+            startActivity(new Intent(this, Viewall.class));
             finish();
         }
 

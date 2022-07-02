@@ -10,21 +10,29 @@
         <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/font/poppins_bold.xml" value="0.28020833333333334" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/font/poppins_light.xml" value="0.28020833333333334" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/font/poppins_medium.xml" value="0.28020833333333334" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/layout/actionbar.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/layout/activity_actionongroup.xml" value="0.176" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/layout/activity_actionsonthegroup.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/layout/activity_addnewmember.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/layout/activity_creategroup.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/layout/activity_dashboard.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/layout/activity_dashboarddrawer.xml" value="0.25" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/layout/activity_first_screen.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/layout/activity_login.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/layout/activity_onboarding.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/layout/activity_signup.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/layout/activity_splash_screen.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/layout/activity_viewall.xml" value="0.1" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/layout/activity_viewall.xml" value="0.176" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/layout/content_dashboarddrawer.xml" value="0.25" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/layout/fragment_slideshow.xml" value="0.25" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/layout/fragment_viewyourgroups.xml" value="0.25" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/layout/slider_layout.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/layout/sliderlayout.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/layout/toolbar.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/menu/activity_main_drawer.xml" value="0.25" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/menu/dashboarddrawer.xml" value="0.25" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/menu/sidemenu.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1825" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/NoUdhar/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1235" />
       </map>
